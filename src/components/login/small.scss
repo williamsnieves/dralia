@@ -1,0 +1,62 @@
+@import 'scss/main.scss';
+@import 'medium';
+@import 'large';
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f3;
+}
+.Login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 980px;
+    margin: 0 auto;
+    
+    &__data {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 80%;
+    }
+    &__logo {
+        &--size {
+            width: 100%;
+        }
+    }
+
+    &__button {
+        margin: 1em 0 0 0;
+        padding: 1em;
+        color: white;
+        font-weight: bold;
+        background-color: #1b68de;
+    }
+    &__forgot-password {
+        color:  #1b68de;
+        margin-top: 1em;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column
+    }
+
+    &__input {
+        margin: 0.8em 0 0 0;
+        padding: 1em;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        color: #aaa;
+    }
+}
+
+@include medium {
+	@import 'medium';
+}
+
+@include large {
+	@import 'large';
+}

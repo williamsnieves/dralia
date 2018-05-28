@@ -1,0 +1,163 @@
+@import 'scss/main.scss';
+@import 'medium';
+@import 'large';
+
+
+.Appointment {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    &-header {
+        display: flex;
+        background-color: #71b967;
+        color: white;
+    }
+    &-row {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+
+        &-item {
+            display: flex;
+            flex-flow: row nowrap;
+            flex-grow: 1;
+            flex-basis: 0;
+            padding: 0.5em;
+            word-break: break-word;
+            border-left: 1px solid white;
+            justify-content: center;
+            align-items: center;
+          }
+    }
+
+    &__header-item {
+        padding: 1em;
+        background-color: #71b967;
+        width: 20%;
+        border-left: 1px solid white;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__header-navigation {
+        width: 1.5em;
+        &--left {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        background-color: #f4f5f7;
+    }
+    &__content-item {
+        display: flex;
+        padding: 1em;
+        width: 20%;
+        border-left: 1px solid white;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.Schedule {
+    color:  #71b967;
+}
+.Marked {
+    text-decoration: line-through;
+}
+
+.Modal-wrapper {
+	position: fixed;
+	z-index: 90;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 1.25em 0.6em;
+}
+
+.Modal-wrapper {
+	position: fixed;
+	z-index: 90;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: em(20) em(10);
+}
+
+.Modal {
+    position: relative;
+    background-color: #fff;
+    z-index: 2;
+    width: 100%;
+    padding: 1em;
+    max-width: 23.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Modal-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+    background-color: #000;
+	opacity: 0.5;
+}
+
+.Register {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2em;
+}
+
+.Register__input {
+    margin: 1em;
+}
+.Register__button {
+    padding: 1em;
+    color: white;
+    background-color: #71b967;
+    margin-top: 1em;
+}
+
+.Close {
+    position: absolute;
+    top:0;
+    right: 0;
+    margin: 1em;
+    cursor: pointer;
+
+    &__icon {
+        width: 2em;
+    }
+}
+
+@include medium {
+	@import 'medium';
+}
+
+@include large {
+	@import 'large';
+}
